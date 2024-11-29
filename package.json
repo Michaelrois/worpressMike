@@ -1,0 +1,13 @@
+{
+	"name": "custom-posts-plugin-learning",
+	"version": "1.0.0",
+	"description": "Un plugin WordPress pour faire des posts custom\r x",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node ./datas/CSVtoJSON.js"
+	},
+	"author": "",
+	"license": "ISC"
+}
