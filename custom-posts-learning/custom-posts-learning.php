@@ -1,5 +1,12 @@
 <?php 
-// Test to better understant the custom posts plugin
+/**
+* Plugin Name: Custom Posts Learning
+* Plugin URI: https://www.your-site.com/
+* Description: Learn how to create a custom post type.
+* Version: 0.1
+* Author: Michael Sirois
+* Author URI: https://www.your-site.com/
+**/
 
 // Register the variables to be used throughout the plugin
 
