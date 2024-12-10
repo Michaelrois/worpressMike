@@ -40,6 +40,36 @@ function learn_artist_get_fields()
             'type' => 'date',
             'desc' => __("La date de naissance de l'artiste", "custom-posts-learning"),
         ),
+        array(
+            'label' => __('Date de mort', "custom-posts-learning"),
+            'id' => 'artist_death',
+            'type' => 'date',
+            'desc' => __("La date de mort de l'artiste", "custom-posts-learning"),
+        ),
+        array(
+            'label' =>__('Pays', "custom-posts-learning"),
+            'id' => 'artist_country',
+            'type' => 'text',
+            'desc' => __("Le pays d'origine de l'artiste", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __('Région', "custom-posts-learning"),
+            'id' => 'artist_region',
+            'type' => 'text',
+            'desc' => __("La région, l'état ou la province d'origine de l'artiste", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __('Ville', "custom-posts-learning"),
+            'id' => 'artist_city',
+            'type' => 'text',
+            'desc' => __("La ville d'origine de l'artiste", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __('Description', "custom-posts-learning"),
+            'id' => 'artist_description',
+            'type' => 'textarea',
+            'desc' => __("La description de l'artiste", "custom-posts-learning"),
+        ),
     )
 }
 
@@ -85,6 +115,13 @@ function learn_song_get_fields()
             'post_type' => 'learn_artist',
             'desc' => __("Entrez et sélectionnez le nom de l'artiste", "custom-posts-learning"),
             'required' => true,
+        ),
+        array(
+            'label' => __("Collaboration", "custom-posts-learning"),
+            'id' => 'song_collaboration',
+            'type' => 'post_association',
+            'post_type' => 'learn_artist',
+            'desc' => __("Entrez et sélectionnez le nom de l'artiste", "custom-posts-learning"),
         ),
         array(
             'label' => __("Durée", "custom-posts-learning"),
@@ -148,6 +185,58 @@ function learn_album_get_fields()
             'id' => 'album_english_title',
             'type' => 'text',
             'desc' => __("Le titre anglais de l'album", "custom-posts-learning"),
+        ),
+        /* Section details*/
+        array(
+            'id' => 'album_details',
+            'type' => 'heading',
+            'header' => __("Détails de l'album", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __("Artiste", "custom-posts-learning"),
+            'id' => 'album_artist',
+            'type' => 'post_association',
+            'post_type' => 'learn_artist',
+            'desc' => __("Entrez et sélectionnez le nom de l'artiste", "custom-posts-learning"),
+            'required' => true,
+        ),
+        array(
+            'label' => __("Collaboration", "custom-posts-learning"),
+            'id' => 'album_collaboration',
+            'type' => 'post_association',
+            'post_type' => 'learn_artist',    
+            'desc' => __("Entrez et sélectionnez le nom de l'artiste", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __("Année", "custom-posts-learning"),
+            'id' => 'album_year',
+            'type' => 'text',
+            'desc' => __("L'annee de sortie de l'album", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __("Genre", "custom-posts-learning"),
+            'id' => 'album_genre',
+            'type' => 'text',
+            'desc' => __("Le genre de l'album", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __("Chansons", "custom-posts-learning"),
+            'id' => 'album_songs',
+            'type' => 'post_association',
+            'post_type' => 'learn_song',
+            'desc' => __("Entrez et sélectionnez les chansons de l'album", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __("Nombre de chansons", "custom-posts-learning"),
+            'id' => 'album_number_of_songs',
+            'type' => 'text',
+            'desc' => __("Le nombre de chansons de l'album", "custom-posts-learning"),
+        ),
+        array(
+            'label' => __("Durée", "custom-posts-learning"),
+            'id' => 'album_duration',
+            'type' => 'text',
+            'desc' => __("La durée de l'album", "custom-posts-learning"),
         )
     )
 }
